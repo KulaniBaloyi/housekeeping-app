@@ -5,3 +5,29 @@ body {
   /* Recommended: A very soft, light gray for a modern, high-contrast look */
   background-color: #f9fafb; /* This is the color value for Tailwind's gray-50 */
 }
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes infinite-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-infinite-scroll {
+  display: flex; /* Added */
+  width: max-content; /* Added: Crucial so it doesn't squash to screen width */
+  animation: infinite-scroll 40s linear infinite;
+}
+
+.animate-infinite-scroll:hover {
+  animation-play-state: paused;
+}
