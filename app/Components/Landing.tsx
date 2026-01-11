@@ -3,18 +3,6 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-/**
- * 💡 ARCHITECTURAL NOTES:
- * To enable the infinite scroll, add this to your globals.css:
- * @keyframes scroll {
- * 0% { transform: translateX(0); }
- * 100% { transform: translateX(-50%); }
- * }
- * .animate-scroll {
- * animation: scroll 40s linear infinite;
- * }
- */
-
 interface StatCardProps {
   label: string;
   value: string;
